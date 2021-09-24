@@ -1,0 +1,33 @@
+.home_wrapper{
+    background-image: url("/src/Components/Home/assets/home.jpg");
+    background-size: cover;
+    height: 757px;
+    width: 1349px;
+    position: relative;
+}
+.home_wrapper h2{
+    color: white;
+    font-family: 'Montserrat';
+    word-spacing: 7px;
+    position: absolute;
+    top: 20%;
+    left: 16%;
+}
+.home_wrapper .shopnow{
+    font-family: 'Montserrat';
+    color: #ed7a23;
+    font-size: 21px !important;
+    font-weight: 700;
+    border: 1px solid #ed7a23;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    top: 31%;
+    left: 30%;
+}
+.shopnow:hover{
+    font-family: 'Montserrat';
+    background-color:#ed7a23;
+    color: black;
+}

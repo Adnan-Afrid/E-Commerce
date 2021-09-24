@@ -1,0 +1,17 @@
+/* Navbar Satrt CSS */
+.logo img{
+    width: 215px;
+    height: 64px;
+}
+ul li{
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0px 14px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+.navbar{
+    background-color: #231f20 !important;
+}
+/* Navbar End CSS */

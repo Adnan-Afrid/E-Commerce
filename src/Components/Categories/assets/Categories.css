@@ -1,0 +1,29 @@
+.categories_wrap{
+    text-align: center;
+}
+.categories_wrap h2{
+    font-weight: 700;
+    margin-top: 27px;
+}
+.categories_wrap ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+}
+.categories_wrap ul li{
+    list-style-type: none;
+    margin-right: 14px;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+}
+.categories_wrap ul .slash::after{
+    content: " | ";
+    margin-left: 13px;
+}
+ul li a:hover{
+    color: #ed7a23 !important;
+}
