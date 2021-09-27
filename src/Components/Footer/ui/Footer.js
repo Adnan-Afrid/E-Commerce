@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../assets/Footer.css';
+import "../assets/Footer.css";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
             <h2>SELECTION BY NAME</h2>
           </div>
           <div className="col-lg-3">
-            <h3>Sport's Collection</h3>
+            <h3>Electronics</h3>
             <ul>
               <li>
                 <Link to="">Mixed Use</Link>
@@ -28,7 +28,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-lg-3">
-            <h3>Electronic's</h3>
+            <h3>Jewelery Collection</h3>
             <ul>
               <li>
                 <Link to="">Mixed Use</Link>
@@ -45,7 +45,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-lg-3">
-            <h3>Jwellery Collection</h3>
+            <h3>Men's Clothing</h3>
             <ul>
               <li>
                 <Link to="">Mixed Use</Link>
@@ -62,7 +62,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-lg-3">
-            <h3>Kid's Collection</h3>
+            <h3>Women's Clothing</h3>
             <ul>
               <li>
                 <Link to="">Mixed Use</Link>
@@ -78,9 +78,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
-          
-         
+
           <hr />
           <div className="col-lg-3">
             <ul>
@@ -100,9 +98,6 @@ const Footer = () => {
               <li>
                 <h3>PHOTOS</h3>
               </li>
-              <li>
-                <h3>POLLS</h3>
-              </li>
             </ul>
           </div>
 
@@ -118,24 +113,27 @@ const Footer = () => {
           </div>
           <div className="col-lg-4">
             <div className="social_icons_wrap">
-              <Link to="">
-                <i className="fa fa-facebook-f"></i>
-              </Link>
-              <Link to="">
-                <i className="fa fa-twitter"></i>
-              </Link>
-              <Link to="">
-                <i className="fa fa-linkedin"></i>
-              </Link>
-              <Link to="">
-                <i className="fa fa-instagram"></i>
-              </Link>
-              <Link to="">
-                <i className="fa fa-youtube-play"></i>
-              </Link>
+              <span>
+                <Link to="/www.facebook.com"></Link><i className="fab fa-facebook-f"></i>
+              </span>
+              <span>
+                <i className="fab fa-twitter"></i>
+              </span>
+              <span>
+                <i className="fab fa-linkedin"></i>
+              </span>
+              <span>
+                <i className="fab fa-instagram"></i>
+              </span>
+              <span>
+                <i className="fab fa-youtube"></i>
+              </span>
             </div>
           </div>
           <hr />
+          <div className="rights">
+            <p>© 2021 eCommerce: All Rights Reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

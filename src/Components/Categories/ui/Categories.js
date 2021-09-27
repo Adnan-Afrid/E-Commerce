@@ -5,11 +5,12 @@ const Categories = () => {
     return ( 
         <div className="categories_wrap">
             <h2>Categories</h2>
+            <hr/>
             <ul>
-                <li className="slash"><Link to="/sports">Sports</Link></li>
-                <li className="slash"><Link to="/electronics">Electronics</Link></li>
-                <li className="slash"><Link to="/jwellery">Jwellery</Link></li>
-                <li><Link to="/kids">Kid's</Link></li>
+            <li className="slash"><Link to={`/detail/electronics`}>Electronics</Link></li>
+                <li className="slash"><Link to={`/detail/jewelery`}>Jewelery</Link></li>
+                <li className="slash"><Link to={`/detail/men's clothing`}>Men's Clothing</Link></li>
+                <li><Link to={`/detail/women's clothing`}>Women's Clothing</Link></li>
             </ul>
         </div>
      );

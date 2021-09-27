@@ -1,9 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
   return (
     <header>
       <div className="navbar_wrapper">
@@ -30,39 +30,21 @@ const Navbar = () => {
               <ul className="navbar-nav mb-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link className="nav-link" aria-current="page" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/details">
-                  
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/sports">
                     
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/electronics">
-                    
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/jwellery">
-                    
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/kids">
-                    
-                  </Link>
-                </li>
-                {/* <li className="nav-item">
+                </li>  
+
+               
+                
+                <div className="cart_wrap">
+                <Link to="/cart"><span><i className="fas fa-shopping-cart"></i></span></Link>
+                 <span className="count">0</span>
+                </div>
+                 <li className="nav-item">
                   <Link className="nav-link" to="/login">
                     Login
                   </Link>
-                </li> */}
+                </li>
               </ul>
             </div>
           </div>

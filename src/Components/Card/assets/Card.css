@@ -1,11 +1,12 @@
 .card_wrap{
 margin-top: 8%;
-border-left: 2px solid lightgray;
+box-shadow: 0 7px 9px rgb(0 0 0 / 12%);
 }
 .card_content a{
     color: #ed7a23 !important;
     text-decoration: none;
 }
+
 .image_wrap img{
     height: 300px !important;
 }
@@ -30,7 +31,7 @@ border-left: 2px solid lightgray;
     background-color: black;
     border-radius: 4px;
     padding: 4px;
-    margin-left: 65px;
+    margin-left: 67px;
 }
 .cart-btn{
     font-weight: 600;
@@ -40,10 +41,7 @@ border-left: 2px solid lightgray;
     border-radius: 4px;
     padding: 4px;
 }
-/* .details_btn:hover{
-    background-color: #ed7a23 !important;
-    color: black;
-} */
 .fa-shopping-cart{
     color: #ed7a23;
 }
+

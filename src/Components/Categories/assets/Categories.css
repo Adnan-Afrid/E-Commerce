@@ -1,9 +1,19 @@
+*{
+    font-family: 'Montserrat';
+}
 .categories_wrap{
     text-align: center;
+}
+.categories_wrap hr{
+    width: 16%;
+    margin-left: 42%;
+    color: black;
+    padding: 1px;
 }
 .categories_wrap h2{
     font-weight: 700;
     margin-top: 27px;
+    color: #ed7a23;
 }
 .categories_wrap ul{
     display: flex;
@@ -23,7 +33,16 @@ ul li a{
 .categories_wrap ul .slash::after{
     content: " | ";
     margin-left: 13px;
+    color: #ed7a23
 }
 ul li a:hover{
     color: #ed7a23 !important;
+}
+.details_head{
+text-align: center;
+font-family: 'Montserrat';
+font-weight: 700;
+margin-top: 24px;
+border-bottom: 2px solid #000000;
+color: #ed7a23;
 }

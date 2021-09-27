@@ -11,7 +11,4 @@
     }
 }
 
-export default {
-    fetchPosts
-}
-
+export default fetchPosts;

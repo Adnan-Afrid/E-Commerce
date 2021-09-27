@@ -1,24 +1,24 @@
 const initialState={
-    productItems:[],
+    categoryItems:[],
     loading: false,
     error:null,
 }
-const PostReducers=(state=initialState, action)=>{
+const categoryReducer = (state=initialState, action)=>{
     switch(action.type){
-        case "FETCH_POSTS_REQUEST":
+        case "FETCH_CATEGORY_REQUEST":
             return{
                 ...state, 
                 loading:true,
                 error:null,
 
             }
-        case "FETCH_POSTS_SUCCESS":
+        case "FETCH_CATEGORY_SUCCESS":
             return{
                 ...state,
                 loading:false,
-                productItems:action.payload
+                categoryItems:action.payload
             }  
-        case "FETCH_POSTS_FAILURE":
+        case "FETCH_CATEGORY_FAILURE":
             return{
                 ...state,
                 loading:false,
@@ -30,5 +30,5 @@ const PostReducers=(state=initialState, action)=>{
 }
 
 
-export default PostReducers;
+export default categoryReducer;
    
