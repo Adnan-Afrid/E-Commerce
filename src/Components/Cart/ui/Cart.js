@@ -1,14 +1,11 @@
 import React from "react";
-import image from "../../Card/assets/image.png";
 import { Link } from "react-router-dom";
 import "../assets/Cart.css";
-import Items from "./Items";
 import { useDispatch, useSelector } from "react-redux";
 import allActions from "../../../redux/actions";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartData = useSelector((state) => state.cartReducer);
   const fetchdata = useSelector((state) => state.cartReducer.fetchCart);
   console.log("fetchcart data is ", fetchdata);
 
@@ -35,9 +32,9 @@ const Cart = () => {
                 </div>
 
                 <div className="add-minus-quantity">
-                  <i className="fas fa-minus minus"></i>
-                  <input type="text" />
-                  <i className="fas fa-plus add"></i>
+                 <button> <i className="fas fa-minus minus"></i></button>
+                  <input type="text" value={1} disabled/>
+                  <button><i className="fas fa-plus add"></i></button>
                 </div>
 
                 <div className="price">
@@ -45,10 +42,10 @@ const Cart = () => {
                 </div>
 
                 <div className="remove-item">
-                  <i
+                 <button> <i
                     className="fas fa-trash-alt remove"
                     onClick={() => deleteCartItem(index)}
-                  ></i>
+                  ></i></button>
                 </div>
               </div>
 
@@ -58,7 +55,7 @@ const Cart = () => {
         })}
         <div className="card-total">
           <h3>
-            Cart Total : <span>$ 700</span>
+            Cart Total : <span>$ 323</span>
           </h3>
           <Link to="/checkout">
             <button>Checkout</button>

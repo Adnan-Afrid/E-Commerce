@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../assets/Navbar.css";
+import { useSelector } from "react-redux";
 
-const Navbar = (props) => {
-
+const Navbar = () => {
+  const loginDataName = useSelector((state) => state.loginReducer);
   return (
     <header>
       <div className="navbar_wrapper">
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
           <div className="container-fluid">
             <div className="logo">
-              <Link to="/"><img src={logo} className="img-fluid" alt="Loading" /></Link>
+              <Link to="/">
+                <img src={logo} className="img-fluid" alt="Loading" />
+              </Link>
             </div>
             <button
               className="navbar-toggler"
@@ -25,26 +28,34 @@ const Navbar = (props) => {
             </button>
             <div
               className="collapse navbar-collapse justify-content-center"
-              id="navbarSupportedContent" 
+              id="navbarSupportedContent"
             >
               <ul className="navbar-nav mb-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="/">
-                    
-                  </Link>
-                </li>  
-
-               
-                
-                <div className="cart_wrap">
-                <Link to="/cart"><span><i className="fas fa-shopping-cart"></i></span></Link>
-                 <span className="count">0</span>
-                </div>
-                 <li className="nav-item">
-                  <Link className="nav-link" to="/login">
-                    Login
-                  </Link>
+                  <Link className="nav-link" aria-current="page" to="/"></Link>
                 </li>
+
+                <div className="cart_wrap">
+                  <Link to="/cart">
+                    <span>
+                      <i className="fas fa-shopping-cart"></i>
+                    </span>
+                  </Link>
+                  <span className="count"></span>
+                </div>
+                {loginDataName.user.email === "abc@gmail.com" ? (
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">
+                      {loginDataName.user.email}
+                    </Link>
+                  </li>
+                ) : (
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">
+                      Login
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

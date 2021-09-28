@@ -20,8 +20,17 @@ const deleteCartItem = (id) => async (dispatch) => {
       dispatch({ type: "DEL_CART_ITEM_FAILURE", payload: error });
     }
   };
+  const increment = () => async (dispatch) =>{
+      console.log("increment is here")
+    try {
+        dispatch({ type: "INCREMENT_SUCCESS"});
+      } catch (error) {
+        dispatch({ type: "INCREMTN_FAILURE", payload: error });
+      }
+  }
 
 export default {
     fetchCart,
-    deleteCartItem
+    deleteCartItem,
+    increment
 };

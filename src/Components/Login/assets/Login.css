@@ -1,12 +1,14 @@
 .head{
     background-image:url('../assets/login1.jpg');
     background-size: cover;    
+    background-repeat: no-repeat;
     padding-top: 68px;
     padding-bottom: 68px;
 }
 .login_wrapper{
     background-image:url('../assets/login1.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     max-width: 45%;
     margin-left: 27%;
