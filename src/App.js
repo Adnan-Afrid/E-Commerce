@@ -11,6 +11,7 @@ import CategoriesDetails from './Components/Categories/ui/CategoriesDetails';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 import Login from './Components/Login/ui/Login';
 import Cart from './Components/Cart/ui/Cart';
+import Checkout from './Components/Checkout/ui/Checkout';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/detail/:category" component={CategoriesDetails} />
         <Route path="/cart" component={Cart} />
         <Route path="/login" component={Login} />
+        <Route path="/checkout" component={Checkout}/>
       </Switch>
       <Footer/>
     </Router>

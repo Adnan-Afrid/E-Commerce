@@ -16,4 +16,4 @@ const fetchSinglePost = (id) => async (dispatch) => {
         dispatch({type: "FETCH_SINGLE_POST_FAILURE"})
     }
 }
-export default fetchSinglePost;
+export default {fetchSinglePost};

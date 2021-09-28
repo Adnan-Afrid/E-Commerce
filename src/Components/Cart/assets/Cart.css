@@ -127,6 +127,7 @@
 }
 
 .items-info .title h2 {
+  font-size: 20px !important;
   font-style: normal;
   font-weight: bold;
   margin-left: 47px;

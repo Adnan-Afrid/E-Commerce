@@ -12,4 +12,4 @@ const fetchCategory = (category) => async (dispatch)=> {
     }
 }
 
-export default fetchCategory;
+export default {fetchCategory};

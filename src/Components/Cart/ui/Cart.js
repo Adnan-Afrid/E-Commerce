@@ -1,59 +1,68 @@
 import React from "react";
 import image from "../../Card/assets/image.png";
+import { Link } from "react-router-dom";
 import "../assets/Cart.css";
 import Items from "./Items";
-const item = [
-  {
-    id: 0,
-    imagee: image,
-    title: "Cloth",
-    description: "Clotht is somehow fit and relax for mens",
-    price: "$ 50",
-  },
-  {
-    id: 1,
-    imagee: image,
-    title: "Shirt",
-    description: "Shirt is somehow not fit and relax for mens",
-    price: "$ 100",
-  },
-  {
-    id: 2,
-    imagee: image,
-    title: "Qameez",
-    description: "Qameez is somehow fit and relax for mens",
-    price: "$ 150",
-  },
-  {
-    id: 3,
-    imagee: image,
-    title: "Ring",
-    description: "Ring is fit and relax for mens",
-    price: "$ 120",
-  },
-];
+import { useDispatch, useSelector } from "react-redux";
+import allActions from "../../../redux/actions";
+
 const Cart = () => {
+  const dispatch = useDispatch();
+  const cartData = useSelector((state) => state.cartReducer);
+  const fetchdata = useSelector((state) => state.cartReducer.fetchCart);
+  console.log("fetchcart data is ", fetchdata);
+
+  const deleteCartItem = (id) => {
+    console.log("item in deleteCartItem fun = ", id);
+    dispatch(allActions.cartActions.deleteCartItem(id));
+
+  };
+
   return (
     <div className="cart_wrapper">
       <div className="main-cart-section">
         <h1>Shopping Cart</h1>
-        <p className="total-items">
-          you have <span className="total-items-count">5</span> items in
-          shopping cart
-        </p>
+        {fetchdata.map((item, index) => {
+          return (
+            <div className="item_wrap" key={index}>
+              <div className="items-info">
+                <div className="product-img">
+                  <img src={item.image} alt="Loading" />
+                </div>
 
-        <div className="cart-items">
-          <div className="cart-items-container">
-            {item.map((curItem) => {
-              return <Items key={curItem.id} {...curItem} />;
-            })}
-          </div>
-        </div>
+                <div className="title">
+                  <h2>{item.title}</h2>
+                </div>
+
+                <div className="add-minus-quantity">
+                  <i className="fas fa-minus minus"></i>
+                  <input type="text" />
+                  <i className="fas fa-plus add"></i>
+                </div>
+
+                <div className="price">
+                  <h3>$ {item.price}</h3>
+                </div>
+
+                <div className="remove-item">
+                  <i
+                    className="fas fa-trash-alt remove"
+                    onClick={() => deleteCartItem(index)}
+                  ></i>
+                </div>
+              </div>
+
+              <hr />
+            </div>
+          );
+        })}
         <div className="card-total">
           <h3>
             Cart Total : <span>$ 700</span>
           </h3>
-          <button>Checkout</button>
+          <Link to="/checkout">
+            <button>Checkout</button>
+          </Link>
           <button className="clear-cart">Clear Cart</button>
         </div>
       </div>

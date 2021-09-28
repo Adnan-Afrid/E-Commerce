@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import "../assets/Card.css";
 import { useDispatch, useSelector } from "react-redux";
 import allActions from "../../../redux/actions";
-import Cart from "../../Cart/ui/Cart";
 
 const Card = () => {
   const dispatch = useDispatch();
@@ -14,6 +13,10 @@ const Card = () => {
   useEffect(() => {
     dispatch(allActions.postActions.fetchPosts());
   }, []);
+  
+  const handleCart = (id) =>{
+    dispatch(allActions.cartActions.fetchCart(id));
+  }
 
   return (
     <div className="container">
@@ -29,7 +32,7 @@ const Card = () => {
                   <h3>${item.price}</h3>
                   <button
                     type="button"
-                    onClick={() => <Cart item={item} />}
+                    onClick={() =>  handleCart(item.id)}
                     className="cart-btn"
                   >
                     Add to Cart<i className="fas fa-shopping-cart"></i>

@@ -1,0 +1,43 @@
+.head_wrap{
+    background-image: url('../../Login/assets/login1.jpg');
+    background-size: cover;
+    padding-top: 14px;
+    padding-bottom: 19px;
+}
+.checkout_wrap{
+    width: 26%;
+    margin-left: 36%;
+    margin-top: 5%;
+    padding-bottom: 2%;
+}
+.checkout_wrap label{
+    font-size: 17px;
+    font-weight: 600;
+}
+.checkout_wrap .email{
+    margin-left: 15px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+.password{
+    margin-left: 21px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+.cardno{
+margin-left: 35px !important;
+margin-bottom: 25px ;
+padding-left: 20px;
+}
+.checkout_wrap button{
+    border: none;
+    margin-left: 43%;
+    padding: 11px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: tomato;
+    background-color: black;
+}
+.checkout_wrap p{
+    color: white
+}
